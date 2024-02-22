@@ -1,0 +1,103 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.3vw;
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    background-color: #211951;
+}
+#root{
+    max-width: 1300px;
+    width: 100%;
+    padding: 2em 40px 70px 40px;
+}
+
+.header{
+    font-size: 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header span{
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #15F5BA;
+}
+.header img{
+    width: 3em;
+    height: auto;
+}
+
+.img-container{
+    margin-top: 3em;
+    display: grid;
+    grid-template-rows: repeat(5,20em);
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    column-gap: 1em;
+}
+.img-container img{
+    height: 100%;
+    width: 100%;
+}
+.img-container div{
+    overflow: hidden;
+    border-radius: 16px;
+}
+.img-container div:first-child{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.img-container div:last-child{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.icon-container{
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4,auto);
+    row-gap: 10px;
+    column-gap: 10px;
+    padding: 10px;
+    background-color: #e3e9ff;
+    right: 0;
+    border-radius: 16px;
+}
+
+.icon-container div{
+    border-radius: 8px;
+    overflow: hidden;
+    width: 6em;
+    height: 3em;
+}
+.icon-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.header-right{
+    position: relative;
+}
+
+footer{
+    margin-top: 3em;
+    color: #15F5BA;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: 700;
+}
+
+@media (max-width : 950px){
+    .icon-container div{
+        width: 8em;
+        height: 4em;
+    }
+}
